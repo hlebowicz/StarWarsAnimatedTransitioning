@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="StarWarsAnimatedTransitioningExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1st Controller" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nIn-wc-g0V">
+                                <rect key="frame" x="177" y="275" width="246" height="51"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="nIn-wc-g0V" secondAttribute="centerY" id="FZQ-pG-5yg"/>
+                            <constraint firstAttribute="centerX" secondItem="nIn-wc-g0V" secondAttribute="centerX" id="dlK-6M-BB1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="b1g-5r-tan" kind="presentation" identifier="PresentSecondController" id="cHl-I0-QoU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="gIy-cj-2vq">
+            <objects>
+                <viewController id="b1g-5r-tan" customClass="SecondViewController" customModule="StarWarsAnimatedTransitioningExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VIq-gE-Zyx"/>
+                        <viewControllerLayoutGuide type="bottom" id="a6u-v5-XwT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ENe-KP-uoz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ahh-ZE-Gal">
+                                <rect key="frame" x="282" y="100" width="37" height="37"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qpB-NN-OSW">
+                                <rect key="frame" x="20" y="184" width="560" height="41"/>
+                                <string key="text">This activity indicator demostrates the transitioning will not break any animated content in the animated view controllers' layers</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2nd Controller" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cd8-nM-cjH">
+                                <rect key="frame" x="170" y="275" width="260" height="51"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="Cd8-nM-cjH" secondAttribute="centerY" id="NMT-im-35N"/>
+                            <constraint firstItem="ahh-ZE-Gal" firstAttribute="top" secondItem="VIq-gE-Zyx" secondAttribute="bottom" constant="80" id="fax-sc-x5H"/>
+                            <constraint firstItem="qpB-NN-OSW" firstAttribute="top" secondItem="ahh-ZE-Gal" secondAttribute="bottom" constant="47" id="hNf-cm-KvZ"/>
+                            <constraint firstAttribute="centerX" secondItem="Cd8-nM-cjH" secondAttribute="centerX" id="lKH-W0-Z3s"/>
+                            <constraint firstAttribute="centerX" secondItem="ahh-ZE-Gal" secondAttribute="centerX" id="rMC-qZ-tum"/>
+                            <constraint firstAttribute="trailing" secondItem="qpB-NN-OSW" secondAttribute="trailing" constant="20" id="urb-e9-wLy"/>
+                            <constraint firstItem="qpB-NN-OSW" firstAttribute="leading" secondItem="ENe-KP-uoz" secondAttribute="leading" constant="20" id="zhR-b0-eyR"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P9z-pn-GES" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1783" y="268"/>
+        </scene>
+    </scenes>
+</document>
