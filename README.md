@@ -50,3 +50,6 @@ func animationControllerForDismissedController(dismissed: UIViewController) -> U
 * Faded edges
 
 #All feedback is welcome!
+
+#License
+StarWarsAnimatedTransitioning is MIT-licensed.
