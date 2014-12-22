@@ -3,10 +3,12 @@
 UIViewController animated transitioning mimicking the Star Wars scene transitions using the custom animated transition APIs added in iOS 7.
 It uses CALayer animations and masks so transitions do not break layout and dynamic/animated content in the view controllers involved.
 
-![output_optimized](https://cloud.githubusercontent.com/assets/5302709/5519027/126ec484-8949-11e4-8bb4-d8d6f1be65a1.gif)
+![anim](https://cloud.githubusercontent.com/assets/5302709/5523106/e2b171c2-89cc-11e4-8954-ebb4821ef569.gif)
 
-This is an experimentation with Core Animation during which I learned quite a few tricks 'till deciding the final(for now!) version and APIs to use.
+This is an experimentation with Core Animation during which I learned quite a few tricks 'till deciding the current implementation and APIs to use.
 I encourage everyone to familiarize themselves with masks, anchor points and transforms of CALayers!
+
+Feedback is welcome and greatly appreciated!
 
 ##Usage
 
@@ -49,7 +51,7 @@ func animationControllerForDismissedController(dismissed: UIViewController) -> U
 * Radial transition style
 * Faded edges
 
-#All feedback is welcome!
+
 
 #License
 StarWarsAnimatedTransitioning is MIT-licensed.
