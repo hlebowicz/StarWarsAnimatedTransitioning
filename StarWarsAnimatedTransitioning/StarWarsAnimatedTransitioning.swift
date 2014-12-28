@@ -27,23 +27,70 @@
 
 import UIKit
 
-enum StarWarsTransitionDirection: Int {
-    case Right
-    case Left
-    case Up
-    case Down
+enum StarWarsTransitionDirection: String {
+    case Right = "Right"
+    case Left = "Left"
+    case Up = "Up"
+    case Down = "Down"
 }
 
-enum StarWarsOperation: Int {
-    case Present
-    case Dismiss
+enum StarWarsOperation: String {
+    case Present = "Present"
+    case Dismiss = "Dismiss"
 }
 
 class StarWarsAnimatedTransitioning: NSObject, UIViewControllerAnimatedTransitioning {
     var duration: NSTimeInterval = 0.65
-
+    
     var transitionOperation: StarWarsOperation = .Present
     var transitionDirection: StarWarsTransitionDirection = .Right
+    
+    // MARK: Objective-C Support
+    
+    class func presentTransitionOperation() -> String {
+        return StarWarsOperation.Present.rawValue
+    }
+    
+    class func dismissTransitionOperation() -> String {
+        return StarWarsOperation.Dismiss.rawValue
+    }
+    
+    class func rightTransitionDirection() -> String {
+        return StarWarsTransitionDirection.Right.rawValue
+    }
+    
+    class func leftTransitionDirection() -> String {
+        return StarWarsTransitionDirection.Left.rawValue
+    }
+    
+    class func upTransitionDirection() -> String {
+        return StarWarsTransitionDirection.Up.rawValue
+    }
+    
+    class func downTransitionDirection() -> String {
+        return StarWarsTransitionDirection.Down.rawValue
+    }
+    
+    var operation: String? {
+        didSet {
+            if operation != nil {
+                if let transitionOperation = StarWarsOperation(rawValue: operation!) {
+                    self.transitionOperation = transitionOperation
+                }
+            }
+        }
+    }
+    var direction: String? {
+        didSet {
+            if direction != nil {
+                if let transitionDirection = StarWarsTransitionDirection(rawValue: direction!) {
+                    self.transitionDirection = transitionDirection
+                }
+            }
+        }
+    }
+    
+    // MARK: Implementation
     
     func transitionDuration(transitionContext: UIViewControllerContextTransitioning) -> NSTimeInterval {
         return duration
