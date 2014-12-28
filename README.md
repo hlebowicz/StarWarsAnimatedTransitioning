@@ -74,6 +74,6 @@ Using StarWarsAnimatedTransitioning with default values does not require any add
 * Radial transition style
 * Faded edges
 
-#License
-StarWarsAnimatedTransitioning is MIT-licensed.
+##License
+StarWarsAnimatedTransitioning is MIT-licensed.  
 If you use it please acknowledge it and tell me about it!
